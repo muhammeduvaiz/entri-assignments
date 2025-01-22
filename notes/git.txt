@@ -1,0 +1,13 @@
+git init
+git add . or git add -A
+git reset (file name) 
+git commit -m "message"
+git remote add orgin
+git branch brachname (to create a branch)
+git switch branchname (to switch the branch) or
+git branch -M main (selecting the branch)
+git push -u orgin main (uploading file to main branch)
+git checkout enter the code (it is used for go to the previous version)
+git log --all --graph
+git merge mergebranch( to merge )
+git pull orgin master
