@@ -9,3 +9,70 @@ consol.log("sum ", sum)
 || or
 ! not
 ?? nullish opretor
+TOPIC: Operators and Expressions
+
+Operators:
+    
+Arithmetic: +, -, *, /, %
+Comparison: ==, ===, <, >, !=
+Logical: &&, ||, !
+Nullish Coalescing Operator  ??
+Unary Operators (+x, -x, x++, x--, !x)
+String Operators (Concatination: "Hello " + "World!")
+
+
+Expressions: 
+    
+In JavaScript, an expression is a valid unit of code that produces a value. An expression can be as simple as a constant value or a more complex combination of operators and operands.
+  Example: 5 + 3, "Hello" + "World", 5 < 3 || 3 < 4
+
+  TOPIC: Control Statements in JavaScript
+
+Control statements are used to dictate the flow of execution in a JavaScript program. These are broadly categorized into:
+	1. Conditional Statements
+	2. Looping Statements
+
+1. Conditional Statements
+	- Conditional statements enable decision-making in your program based on conditions.
+	- Types of Conditional Statements:
+		1. if Statement
+		2. if...else Statement
+		3. if...else if...else Statement
+		4. switch Statement
+		
+		
+2. Looping Statements
+	- Loops allow you to repeat a block of code multiple times.
+	- Types of Loops:
+		1. for Loop:
+			- A loop that runs for a specified number of iterations.
+		2. while Loop:
+			- Executes as long as the condition is true.
+		3. do...while Loop:
+			- Similar to while, but ensures the loop runs at least once, regardless of the condition.
+		4. for...of Loop (ES6+):
+			- Iterates over iterable objects like arrays or strings.
+		5. for...in Loop:
+			- Iterates over the enumerable properties of an object.
+		
+	- Break and Continue
+		- break: Exits the loop entirely.
+		- continue: Skips the current iteration and continues with the next.
+		
+		
+
+Examples:
+	1. Combining Conditional and Looping Statements:
+	
+		let scores = [85, 92, 78, 63, 90];
+		for (let i = 0; i < scores.length; i++) {
+			if (scores[i] >= 90) {
+				console.log("Score: " + scores[i] + " - Grade: A");
+			} else if (scores[i] >= 75) {
+				console.log("Score: " + scores[i] + " - Grade: B");
+			} else {
+				console.log("Score: " + scores[i] + " - Grade: C");
+			}
+		}
+
+
