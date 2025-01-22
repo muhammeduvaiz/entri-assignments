@@ -21,3 +21,8 @@ if(mark>=70){
 }else{
     console.log('Grade C');
 }
+
+let n=5;
+let s=2;
+output = n*s;
+console.log(output);
