@@ -1,0 +1,51 @@
+.center-div {
+    display: flex;
+    justify-content: center;
+}
+
+.text-color-heading {
+    color: rgb(0, 0, 124)
+}
+
+.grid-container {
+    /* height: 100vh; */
+    background-color: yellowgreen;
+    padding: 10px;
+    display: grid;
+    grid-gap: 10px;
+    /* grid-row-gap & grid-column-gap */
+    /* grid-template-columns: 150px 150px 200px 150px; */
+    /* grid-template-columns: repeat(4, 150px); */
+    /* grid-template-columns: 2fr 1fr;  */
+    /* grid-template-rows: 150px 150px 200px auto; */
+    /* grid-auto-rows: 70px 200px; */
+    grid-template-areas:
+        "header header"
+        "sidebar content"
+        "bio bio"
+    ;
+}
+
+.grid-item {
+    background-color: grey;
+}
+
+.item1 {
+    height: 5vh;
+    grid-area: header;
+}
+
+.item2 {
+    grid-area: sidebar;
+    height: 28vh;
+}
+
+
+.item3 {
+    grid-area: content;
+}
+
+.item4 {
+    grid-area: bio;
+    height: 8vh;
+} 

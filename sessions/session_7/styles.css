@@ -1,0 +1,33 @@
+:root {
+    font-family: 'Arial', sans-serif;
+    /* font-size: 16px; */
+}
+
+.green-color {
+    color: green;
+}
+
+.blue-color {
+    color: blue;
+}
+
+footer {
+    background-color: #a7a7a7;
+    height: 30px;
+}
+
+button {
+    background-color: rgb(194, 194, 255);
+    font-size: large;
+}
+
+button a {
+    text-decoration: none;
+    color: #000000;
+}
+
+#unique-style {
+    color: pink;
+    font-size: 24px;
+    font-weight: bold;
+}

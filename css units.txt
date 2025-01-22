@@ -1,0 +1,17 @@
+css units:
+
+0. px - takes exact pixel
+
+1. em - inherits parent size
+
+2. rem - Root em. This relative unit is not affected by the size or setting of a parent element instead it takes the html size (default html size: 16px)
+eg: (16px default)  2rem = 16*2 = 32px
+
+3. % - Percentages, or the percent size relative to the parent's size:
+eg: Since the parent’s width is 400px, the width of the inner paragraph is be 300px 
+	(400 * .75).
+
+4. vh - View height. 1vh is 1% of the height of the viewport.
+eg: View height. 1vh is 1% of the height of the a`viewport`.
+
+5. 1ex is the x-height of the font, or half of 1em.

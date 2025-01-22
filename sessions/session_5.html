@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML BASICS: FORMS & FORM Validation</title>
+</head>
+
+<body>
+    <h1>Forms and Basic Form validation</h1>
+    <hr>
+    <br>
+    <br>
+
+    <section>
+        <form autocomplete="on" onsubmit="submitTheForm(event)">
+            <div>
+                <label for="fullName">Full Name: </label>
+                <input type="text" id="fullName" name="fullName" placeholder="Full Name">
+            </div>
+
+            <br>
+
+            <div>
+                <label for="email">Email: </label>
+                <input type="email" id="email" name="email" placeholder="Email">
+            </div>
+
+            <br>
+
+            <div>
+                <label for="password">Password: </label>
+                <input type="password" id="password" pattern="[A-Za-z]{8}" placeholder="password" name="password"
+                    minlength="8" maxlength="10" required>
+            </div>
+
+            <br>
+
+            <div>
+                <label>Gender:</label>
+                <div>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                </div>
+                <div>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </div>
+            </div>
+
+            <br>
+
+            <div>
+                <label for="dob">Date of Birth: </label>
+                <input type="date" id="dob" name="dob">
+            </div>
+
+            <br>
+
+            <div>
+                <textArea id="subject" placeholder="Give your subject here to submit..." minlength="20" maxlength="200"
+                    rows="12" cols="40" name="subject"></textArea>
+            </div>
+
+            <br>
+
+            <div>
+                <label for="country-label">Country:</label>
+                <select name="country" id="country-label">
+                    <option value="IN">India</option>
+                    <option value="US">United States</option>
+                    <option value="NZ">New Zealand</option>
+                    <option value="AUS">Australia</option>
+                </select>
+            </div>
+
+            <br>
+
+            <legend>subscriptions: </legend>
+            <div>
+                <input type="checkbox" id="subscriptions-steam" name="steam-subscription">
+                <label for="subscriptions-steam">Subscribe to Steam</label>
+            </div>
+            <div>
+                <input type="checkbox" id="subscriptions-epic" name="epicgames-subscription">
+                <label for="subscriptions-epic">Subscribe to Epic games</label>
+            </div>
+
+            <br>
+
+            <div>
+                <fieldset>
+                    <legend>Updates needed:</legend>
+                    <div>
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">Subscribe to newsletter</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="updates" name="updates">
+                        <label for="updates">Receive updates</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="terms" name="terms">
+                        <label for="terms">Agree to terms and conditions</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <br>
+            <br>
+
+            <div>
+                <button type="submit">submit</button>
+            </div>
+        </form>
+    </section>
+
+    <script>
+        function submitTheForm(event) {
+            event.preventDefault();
+
+            const formData = new FormData(event.target);
+
+            for (const [key, value] of formData.entries()) {
+                console.log(`${key}: ${value}`);
+            }
+        }
+    </script>
+</body>
+
+</html>

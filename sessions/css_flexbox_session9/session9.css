@@ -1,0 +1,45 @@
+.center-div {
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+}
+
+.flex-container {
+    display: flex;
+    background-color: yellow;
+    padding: 10px;
+    /* justify-content: center; */
+    /* align-items: center; */ 
+    /* flex-wrap: wrap; */
+}
+
+.flex-item {
+    width: 200px;
+    font-size: 30px;
+    margin: 5px;
+    border: 1px solid black;
+}
+
+.box1 {
+    min-height: 300px;
+    background-color: red;
+    /* flex-grow: 1; */
+    /* flex-shrink: 2; */
+    /* flex: 2; */
+}
+
+.box2 {
+    min-height: 300px;
+    background-color: green;
+    /* flex-grow: 0; */
+    /* flex-shrink: 3; */
+    /* flex: 1; */
+}
+
+.box3 {
+    min-height: 300px;
+    background-color: rgb(38, 38, 207);
+    /* flex-grow: 3; */
+    /* flex-shrink: 1; */
+    /* flex: 1; */
+}

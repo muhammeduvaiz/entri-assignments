@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+    <title>HTML BASICS: LAYOUT TAGS</title>
+</head>
+
+<body>
+    <!-- Header Tag -->
+    <Header>
+        <nav>
+            <ul style="list-style-type: none;display: flex;column-gap: 2rem;justify-content: end;margin: 2rem;">
+                <li>Home</li>
+                <li>Services</li>
+                <li>Gallery</li>
+                <li><a href="./layout_tag_notes.html" target="_blank"
+                        style="text-decoration: none;color: rgb(245, 180, 0);">layout tag notes</a></li>
+            </ul>
+        </nav>
+    </Header>
+
+    <!-- Main Tag -->
+    <main>
+        <!-- Banner section -->
+        <section>
+            <div>
+                <h1 title="This is H1 Tag given by me">Welcome to our <span style="color: red;">Website!</span></h1>
+                <p>This is a basic layout using HTML5 layout tags.</p>
+            </div>
+
+            <div>
+                <h1>Welcome to our <span style="color: red;">Website!</span></h1>
+                <p>This is a basic layout using HTML5 layout tags.</p>
+            </div>
+        </section>
+
+        <!-- service section -->
+        <section>
+            <h1>Welcome to our Website!</h1>
+            <p>This is a basic layout using HTML5 layout tags.</p>
+        </section>
+
+        <section>
+            <h1>Welcome to our second section!</h1>
+            <p>This is a basic layout using HTML5 layout tags.</p>
+        </section>
+
+        <!-- aside tag -->
+        <aside>
+            <h2>Related Links (can be used to make sidebar and related links)</h2>
+            <ul>
+                <li><a href="https://google.com">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+            </ul>
+        </aside>
+
+        <!-- Button Tag -->
+        <Button title="This is Button">SUBMIT</Button>
+
+        <!-- Article Tag-->
+        <section>
+            <article>
+                <h1>See our Blogs</h1>
+                <p>This Tag is used for wrapping Blogs, articles, news etc.</p>
+            </article>
+        </section>
+
+        <br>
+        <hr>
+        <br>
+
+        <!-- Multimedia section -->
+        <section>
+            <h1>Multimedia Tags</h1>
+            <!-- video tag -->
+            <h3>Video tag</h3>
+            <video src="./SampleVideo_1280x720_1mb.mp4" width="600" controls autoplay muted loop>
+            </video>
+
+            <!-- audio tag -->
+            <h3>audio tag</h3>
+            <audio src="./sample-3s.mp3" controls muted loop></audio>
+
+            <br>
+
+            <!-- iFrame Tag -->
+            <h1>IFrame tag</h1>
+            <iframe src="https://www.javatpoint.com/" style="height:50vh;width:100vh" title="IframeExample"></iframe>
+        </section>
+
+        <br>
+    </main>
+
+    <br>
+    <!-- Footer Tag -->
+    <footer>
+        <div style="display: flex;justify-content: center;">
+            <p>&copy; 2023 Your Company. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

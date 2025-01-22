@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to CSS3</title>
+
+    <!-- link to external css file -->
+    <link rel="stylesheet" href="./styles.css">
+
+    <style>
+        span.mute {
+            background-color: rgb(161, 161, 161);
+            padding: 0 5px 0 5px;  /* top right bottom left */
+        }
+
+        .no-underline {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Tag -->
+    <header>
+        <h1 class="primary-color">Welcome to CSS3 Introduction</h1>
+        <nav>
+            <ul style="list-style-type: none;">
+                <li><a class="no-underline" href="#section1">Section 1</a></li>
+                <li><a class="no-underline" href="./session2.html" target="_blank">Section 2</a></li>
+                <li><a class="no-underline" href="#section3">Section 3</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <br>
+
+    <!-- Main Tag -->
+    <main>
+        <section id="section1" class="background-color">
+            <h2>Section 1: Color</h2>
+            <p style="font-weight: bold;">This is an example of text color.</p>
+        </section>
+        <section id="section2" class="background-color">
+            <h2>Section 2: Background Color</h2>
+            <p>This section has a background color.</p>
+        </section>
+        <section id="section3" class="background-color">
+            <h2>Section 3: ID and Class</h2>
+            <p id="unique-element">This paragraph is styled using an ID.</p>
+            <p class="common-style">This paragraph is styled using a class.</p>
+        </section>
+    </main>
+
+    <br><br>
+
+    <!-- Footer Tag -->
+    <footer>
+        <p>&copy; <span class="success-color">2020</span> &nbsp; <span class="mute warning-color">CSS3 Introduction</span></p>
+    </footer>
+</body>
+
+</html>

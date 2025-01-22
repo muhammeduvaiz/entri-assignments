@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>session 8 - code sample</title>
+
+    <!-- link to external css file -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Internal styling -->
+    <style>
+        .text-bold {
+            font-weight: bold;
+            font-size: larger;
+        }
+
+        .heading {
+            font-size: 2em;
+            color: blue;
+        }
+
+        a.red {
+            color: red;
+            text-decoration: none;
+        }
+
+        .padding-all {
+            padding: 10px 15px 20px 25px;
+            /* top right bottom left */
+            /* padding-top: 10px;
+            padding-right: 15px;
+            padding-bottom: 20px;
+            padding-left: 25px; */
+        }
+
+        .padding-5 {
+            padding: 10px;
+            /* all sides */
+        }
+
+        .padding-verical {
+            padding: 10px 0;
+            /* top-bottom left-right */
+        }
+
+        .border {
+            /* border: 1px dotted black; */
+            /* border-width border-style border-color */
+            border-width: 1px;
+            border-style: dotted;
+            border-color: black;
+        }
+
+        .margin-10 {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="heading">session 6 - code sample</h1>
+
+    <h2 id="unique-style">By Nijas Khan</h2>
+
+    <hr>
+
+    <h2>Introduction to <span class="text-bold green-color">CSS 3</span> & Basic properties</h2>
+
+    <Header>
+        <nav>
+            <!-- inline styling -->
+            <ul style="list-style-type: lower-roman;">
+                <li><a href="" class="red">section 6</a></li>
+                <li><a href="" class="red">section 2</a></li>
+                <li><a href="" class="red">section 1</a></li>
+            </ul>
+        </nav>
+    </Header>
+
+    <main>
+        <section>
+            <h3 class="text-bold">section 1</h3>
+            <p>section 1 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid consectetur voluptates quod
+                earum repellat, commodi perspiciatis fuga aliquam sapiente ipsam dolores praesentium. Tempora est sit
+                omnis commodi, porro libero eveniet.</p>
+        </section>
+
+        <br>
+
+        <section>
+            <h3>section 2</h3>
+            <p class="text-bold">section 2 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi non
+                exercitationem, quam ab,
+                magni quasi doloribus eius impedit asperiores, dolore dolorem architecto? Repellat quam nobis dolore
+                autem ad ea facere?</p>
+        </section>
+
+        <br>
+
+        <section>
+            <h3 class="border padding-all">section 3</h3>
+            <p>section 3 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quidem dignissimos quos at
+                assumenda ex, accusantium possimus cum modi aliquid vel repudiandae molestias atque dicta totam pariatur
+                eos sint <span>obcaecati.</span></p>
+        </section>
+
+        <!-- css box model - example -->
+        <section style="background-color: lightgreen; padding: 10px;">
+            <div style="background-color: lightgray;margin: 10px;">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita atque veniam aliquam vero tempora
+                    architecto harum facere? Consequuntur repellat voluptate ipsam facilis odio, excepturi doloremque
+                    nobis in perspiciatis eveniet nesciunt.</p>
+            </div>
+        </section>
+
+        <!-- maring and padding example -->
+        <button style="padding: 10px;margin-top: 10px;">session 2</button>
+    </main>
+
+    <footer>
+        <p class="padding-5">copyright 2002 &nbsp;<span>@entri_app</span></p>
+    </footer>
+</body>
+
+</html>

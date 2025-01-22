@@ -1,0 +1,35 @@
+// variables: 
+
+JavaScript Variables can be declared in 4 ways:
+    - var
+    - let
+    - const
+
+var: can be declared many times without causing any errors
+var a;
+a = 13;
+console.log(a);
+
+a = 16;
+console.log(a);
+
+var a = 19;
+console.log(a);
+
+var a = "hello world"
+console.log(a);
+
+let: can only be declared once and cannot be re-declared, but we can re-assign values.
+let b;
+
+b = 10;
+console.log(b);
+
+b = 20;
+console.log(b);
+
+
+const: can only be declared once and cannot be re-declared or re-assigned.
+const c = 10;
+
+console.log(c);

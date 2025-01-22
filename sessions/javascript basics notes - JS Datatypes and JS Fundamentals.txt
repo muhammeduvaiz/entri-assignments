@@ -1,0 +1,79 @@
+Javascript Basics: 
+
+1. What is JavaScript?
+	- JavaScript is a lightweight, interpreted, object-oriented language used to make web pages interactive.
+	
+2. How to Include JavaScript in HTML document?
+	- Inline
+	- Internal
+	- External
+	
+3. Comments in javascript:
+	- Single-line: // This is a comment
+	- Multi-line: /* This is a comment */
+
+4. Operators:
+	- Arithmetic: +, -, *, /, %
+	- Comparison: ==, ===, <, >, !=
+	- Logical: &&, ||, !
+
+
+Data Types:
+
+1. what is primitive data type?
+	- Stored directly in the memory.
+	- Immutable (cannot be changed).
+	- Directly stores the value.
+	
+	- example:
+		let a = 10;
+		let b = a; 	// b gets a copy of the value of a
+		b = 20;
+		console.log(a);   // output: 10
+
+2. what is reference data type?
+	- Stored as a reference in memory.
+	- Mutable (can be changed).
+	- Stores a reference (pointer) to the memory location.
+	
+	- example: 
+		let obj1 = { name: "Alice" };
+		let obj2 = obj1;  // obj2 references the same object as obj1
+		obj2.name = "Bob";
+		console.log(obj1.name); // "Bob" (changed)
+		
+- Primitive Datatypes:
+	1. String: Represents textual data. eg: "javascript"
+	2. Number: Represents numeric values (both integers and floating-point numbers).
+	3. BigInt: Represents integers with arbitrary precision.
+	4. Boolean: Represents a logical entity, true or false.
+	5. Undefined: Represents a variable that has been declared but has not been assigned a value.
+	6. Null: Represents the intentional absence of a value.
+
+- Non-Primitive (Reference) Datatypes:
+	1. Object: Used to store key-value pairs.
+	2. Array: A collection of ordered items (can hold mixed types).
+	3. Function: A block of code designed to perform a particular task, considered a type of object.
+	
+4. How to check a value type in javascript ?
+	1.primtive:
+		- console.log(typeof "Hello"); 		// String
+		- console.log(typeof 42);      		// Number
+		- console.log(typeof true);    		// Boolean
+		- console.log(typeof null);    		// Object (quirk in JS)
+		- console.log(typeof undefined); 	// Undefined
+		
+	2. non-primtive:
+		- 	const obj1 = {
+				name: "nijas khan",
+				age: 12
+			}
+			console.log(typeof obj1);  // object
+
+			const arr1 = ['nijas', 23, true, null, undefined];		
+			console.log(typeof arr1);  // object
+			
+			!!arr1 also showing the datatype as object because under the hood array is also an object but has an order and can store multiple values. array also has some more methods like push(), pull() etc.
+
+
+

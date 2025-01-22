@@ -1,0 +1,73 @@
+.center-div {
+    display: flex;
+    justify-content: center;
+}
+
+.header {
+    position: fixed;
+    top: 10;
+    left: 30%;
+    background-color: grey;
+    z-index: 1;
+}
+
+.container {
+    height: 200vh;
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    border: 1px solid black;
+    /* position: relative; */
+}
+
+.item {
+    height: 200px;
+    width: 200px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.box1 {
+    background-color: red;
+    /* position: relative; */
+    /* top: 20%; */
+    /* position: relative; */
+    /* top: 100px; */
+    /* bottom: 100px; */
+    /* right: 100px; */
+    /* left: 100px; */
+}
+
+.box2 {
+    background-color: blue;
+    /* position: relative;
+    top: 20%; */
+    /* position: absolute; */
+    /* bottom: 0; */
+    /* right: 0; */
+    /* top: 0; */
+    /* left: 0;  */
+    /* z-index: -1; */
+    /* top: 100px; */
+    /* bottom: 100px; */
+    /* left: 100px; */
+    /* right: 100px; */
+}
+
+.box3 {
+    background-color: green;
+    /* position: sticky; */
+    /* top: 0; */
+    /* bottom: 0; */
+    /* right: 0; */
+}
+
+/* 
+    position: 
+        1. static       - default
+        2. relative
+        3. absolute
+        4. fixed
+        5. sticky
+*/

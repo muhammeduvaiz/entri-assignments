@@ -1,0 +1,59 @@
+/* we have to write the media-queries always at last because of the overriding behaviour */
+
+.center-div {
+    display: flex;
+    justify-content: center;
+}
+
+.off-white-color {
+    background-color: rgb(163, 163, 163);
+}
+
+.padding-5 {
+    padding: 5px;
+}
+
+.margin-vertically-15 {
+    margin: 15px 0;
+}
+
+h2 {
+    color: red;
+}
+
+p {
+    color: yellow
+}
+
+h3 {
+    color: blue;
+}
+
+@media (max-width: 560px) {
+    /* normal css */
+    h2 {
+        color: aqua;
+    }
+    h1 {
+        color: green;
+        font-size: 60px;
+    }
+    p {
+        color: white;
+        font-size: 14px;
+    }
+}
+
+@media (orientation: portrait) and (min-width: 700px) {
+    /* landscape css */
+    h2 {
+        color: cadetblue;
+    }
+}
+
+@media (orientation: portrait), (min-width: 700px) {
+    /* landscape css */
+    h1 {
+        color: purple;
+    }
+}

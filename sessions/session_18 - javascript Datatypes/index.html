@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link ot local css -->
+    <link rel="stylesheet" href="./styles.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Basics of Javascript</title>
+</head>
+
+<body>
+    <div class="center-div">
+        <h1>Basics and Introduction to Javascript</h1>
+    </div>
+
+    <div class="m-2 p-2">
+        <!-- inline script -->
+        <button class="btn btn-primary" onclick="alert('alert button clicked')">ALERT</button>
+    </div>
+
+    <div class="m-2 p-2">
+        <button class="btn btn-primary" id="btnInline">inline alert</button>
+    </div>
+
+    <div class="m-2 p-2">
+        <p id="calcPara">calculations: <span id="calcSpan">0</span></p>
+    </div>
+
+    <!-- external script -->
+    <script src="./scripts/script.js"></script>
+
+    <!-- internal  -->
+    <script>
+        const internalButton = document.getElementById("btnInline");
+        // console.log(internalButton);
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
