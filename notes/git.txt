@@ -10,4 +10,4 @@ git push -u orgin main (uploading file to main branch)
 git checkout enter the code (it is used for go to the previous version)
 git log --all --graph
 git merge mergebranch( to merge )
-git pull orgin master
+git pull orgin main

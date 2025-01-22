@@ -1,0 +1,11 @@
+let
+const 
+var
+
+const sum = 1 + 2
+consol.log("sum ", sum)
+
+&& AND
+|| or
+! not
+?? nullish opretor

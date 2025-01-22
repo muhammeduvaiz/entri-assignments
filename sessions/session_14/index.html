@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link to local css file -->
+    <link rel="stylesheet" href="./styles.css">
+    <!-- link to bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Bootstrap Components (cards, modals, alerts etc.)</title>
+</head>
+
+<body>
+    <!-- banner section -->
+    <section class="container-fluid bg-image">
+        <!-- Navbar Section -->
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+                <div class="container-fluid">
+                    <div style="width: 80px;cursor: pointer;" class="d-flex align-items-center">
+                        <video src="./assets/animations/spiderman_logo_web.webm" alt="spiderman-web-animation"
+                            class="img-fluid" autoplay loop muted></video>
+                        <!-- <a class="navbar-brand text-dark fw-bold" href="#">SPIDER WEB</a> -->
+                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav ms-3 me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark fs-5 custom-hover" style="font-weight: 600;"
+                                    href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark fs-5 custom-hover" style="font-weight: 600;"
+                                    href="#">Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark fs-5 custom-hover" style="font-weight: 600;"
+                                    href="#">Pricing</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Spiderman Content Section -->
+        <div class="d-flex align-items-center justify-content-start" style="height: calc(100vh - 100px);">
+            <div class="ms-2">
+                <h1 class="text-custom-dark-red fw-bold typing-animation">
+                    <span class="text-spider-red">Spider Man - Remastered:</span><br>
+                    The Ultimate Experience<br>
+                    Buy PS 5 Now...
+                </h1>
+                <div class="mt-5">
+                    <button class="banner-btn fs-4">BUY NOW</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cards Section -->
+    <section class="container-fluid section-gap">
+        <div class="row gy-5">
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card">
+                    <img src="./assets/images/spiderman.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">SpiderMan card2</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            view card
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card">
+                    <img src="./assets/images/spiderman.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">SpiderMan Card 2</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            view card
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card">
+                    <img src="./assets/images/spiderman.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            view card
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card">
+                    <img src="./assets/images/spiderman.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            view card
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card">
+                    <img src="./assets/images/spiderman.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            view card
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card">
+                    <img src="./assets/images/spiderman.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            view card
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Card Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Spider Man Permium Card</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Buy Spider man premium card at 50% off!!
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">buy now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- till here -->
+    </section>
+
+    <!-- carousel section -->
+    <section class="container-fluid section-gap mb-5" id="carousel">
+        <div class="row">
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner"> <!-- style="height: 80vh;" -->
+                    <div class="carousel-item active" data-bs-interval="4000">
+                        <img src="./assets/images/race-car-7624025.jpg" class=".d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="4000">
+                        <img src="./assets/images/car-racing-4394450.jpg" class=".d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="4000">
+                        <img src="./assets/images/motorcycle-1084694.jpg" class=".d-block w-100" alt="...">
+                    </div>
+                </div>
+                <!-- functionilities of button -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+                <!-- till here -->
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
