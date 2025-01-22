@@ -67,3 +67,8 @@ const additionFn1 = (a, b) => {
 console.log("arrow fn: ", additionFn(3, 7));
 
 console.log("arrow fn1: ", additionFn1(5, 3));
+
+// Anonymous Function:
+const anonymousFn = function () {
+    console.log("I am an anonymous function");
+};
