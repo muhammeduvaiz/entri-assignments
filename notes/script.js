@@ -48,5 +48,7 @@ let k=0;
 do{
     console.log("value of k",k);
     k++;
-}while(k<10);
+}while(k==10);
+
+
 
