@@ -34,3 +34,13 @@ console.log(ele5);
 
 ele(ele3);
 ele(ele4);
+
+// onclick event
+function change(color){
+    if(elements[1].style.color=="red"){
+        elements[1].style.color = color;
+    }else{
+        elements[1].style.color = "red";
+    }
+    console.log(elements[1].style.color);
+}
