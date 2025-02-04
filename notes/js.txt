@@ -75,4 +75,89 @@ Examples:
 			}
 		}
 
+DOM
+1. Document Object Model (DOM) is a programming interface for HTML and XML documents. It represents the structure and content of a document as a tree of objects.
+2. DOM provides methods and properties to manipulate the structure and content of a document. These methods and properties allow developers to access, modify, and create elements, attributes, text nodes, and other
+3. DOM Levels:
+    - DOM Level 0 (Document Object Model 1.0): This level defines the core interfaces and basic concepts for manipulating documents.
+	- DOM Level 1 (Document Object Model 1.1): This level adds event handling, CSS styling, and more advanced features.
+	- DOM Level 2 (Document Object Model 2.0): This level adds support for XML, namespaces, and DOM events.
+	- DOM Level 3 (Document Object Model 3.0): This level adds support for XML namespaces, XPath, and the Document Type Definition (DTD).
+	- DOM Level 4 (Document Object Model 4.0): This level adds support for Shadow DOM, HTML templates, and more advanced features.
+	- DOM Level 5 (Document Object Model 5.0): This level adds support for the Fetch API, Web Workers, and more advanced features.
+	- DOM Level 6 (Document Object Model 6.0): This level adds support for the AbortController and AbortSignal APIs, and the Promise API.
+	- DOM Level 7 (Document Object Model 7.0): This level adds support for the Intersection Observer API, the Picture-in-Picture API, and more advanced features.
+	- DOM Level 8 (Document Object Model 8.0): This level adds support for the File API, the File System API, and the Data Transfer API.
+	- DOM Level 9 (Document Object Model 9.0): This level adds support for the Promise.allSettled(), the AbortController, and the AbortSignal APIs.
+	- DOM Level 10 (Document Object Model 10.0): This level adds support for the Web Cryptography API, the GlobalEventHandlers, and the CustomEvent API.
+	- DOM Level 11 (Document Object Model 11.0): This level adds support for the DOMParser, DOMSerializer, and the NodeIterator API.
 
+
+	TOPIC: Events and Event Handling in JavaScript
+	- Events are actions that occur in a web page or web application. Examples of events include clicking a button, submitting a form, or moving the mouse over an element.
+	- Event handling is the process of responding to events by executing JavaScript code. This can be done using event listeners or event delegation.
+	- Event listeners allow you to attach event handlers to specific elements or the entire document. When an event occurs on an element, the event listener is called and the specified code is executed.
+	- Event delegation is a technique where you attach a single event listener to a parent element, and then use event delegation to handle events for its child elements. This allows you to avoid
+	- DOM Traversal: Traverse the DOM tree to find specific elements or perform operations on them. Examples of DOM traversal methods include childNodes, parentNode, firstChild, lastChild,
+	- Event Bubbling: Event bubbling is the process of events propagating from the target element to its parent elements. When an event occurs on an element, the event listener attached
+	- Event Capturing: Event capturing is the process of events propagating from the root element (document) to the target element. When an event occurs on an element, the event listener attached
+	- Event Object: The event object provides information about the event, such as the target element, the event type, and additional event-related properties.
+	- Event Target: The event target is the element that the event listener is attached to. When an event occurs, the event target is the element that received the event.
+	- Event Types: There are various event types available in JavaScript, such as click, mouseover, keydown, keyup, and load. Each event type has its own properties and methods
+	- Event Listener: An event listener is a function that will be called when an event occurs on the specified element. The event listener can be attached using the addEventListener() method or by assigning
+	- Event Delegation: Event delegation is a technique where you attach a single event listener to a parent element, and then use event delegation to handle events for its child elements. This
+	- Event Loop: The event loop is a mechanism in JavaScript that manages the execution of event handlers. It continuously checks for and processes events in the event queue. When an event occurs,
+	- Event Propagation: Event propagation is the process of events propagating from the target element to its parent elements. When an event occurs on an element, the event listener attached
+	- Event Target: The event target is the element that the event listener is attached to. When an event occurs, the event target is the element that received the event.
+	- Event Types: There are various event types available in JavaScript, such as click, mouseover, keydown, keyup, and load. Each event type has its own properties and methods
+	- Event Listener: An event listener is a function that will be called when an event occurs on the specified element. The event listener can be attached using the addEventListener() method or by assigning
+	- Event Delegation: Event delegation is a technique where you attach a single event listener to a parent element, and then use event delegation to handle events for its child elements. 
+
+	TOPIC: AJAX and Asynchronous JavaScript and XML (AJAX)
+	- AJAX (Asynchronous JavaScript and XML) is a technique for creating interactive web applications. It allows web applications to send and receive data asynchronously, without requiring a page refresh.
+	- AJAX is based on the XMLHttpRequest object, which allows you to send HTTP requests and receive responses asynchronously. You can use AJAX to perform various operations, such as fetching data from a server,
+	- AJAX Request: An AJAX request is an HTTP request sent to a server using the XMLHttpRequest object. The request can be made using the open() method, setRequestHeader() method, and
+	- AJAX Response: An AJAX response is the server's response to an AJAX request. The response can be in JSON format, XML format, or any other supported format. You can use the
+	- AJAX Error: An AJAX error occurs when there is an error making the AJAX request or receiving the response. The error can be handled using the onerror() event listener or by using the
+	- Cross-Origin Resource Sharing (CORS): CORS is a mechanism that allows web applications to make AJAX requests to different origins (domains) without having to modify the server-side
+	- AJAX Events: There are several AJAX events available in JavaScript, such as loadstart, progress, load, error, and abort. These events can be used to handle the progress, success
+	- AJAX Libraries: There are several AJAX libraries available in JavaScript, such as jQuery, Axios, and Fetch API. These libraries provide a convenient and widely used way to make AJAX requests.
+	- AJAX with JSON: AJAX can be used to fetch data in JSON format. You can send an AJAX request to a server and receive the data in JSON format using the responseText property.
+	- AJAX with XML: AJAX can be used to fetch data in XML format. You can send an AJAX request to a server and receive the data in XML format using the responseXML property.
+	- AJAX with Images: AJAX can be used to fetch images. You can send an AJAX request to a server and retrieve the image data using the responseText property.
+	- AJAX with Forms: AJAX can be used to submit forms. You can send an AJAX request to a server and receive the response using the responseText property.
+	- AJAX with Local Storage: AJAX can be used to store data in the local storage. You can send an AJAX request to a server and store the data in the local storage using the localStorage\
+	- AJAX with Server-Sent Events (SSE): AJAX can be used to receive real-time updates from a server using Server-Sent Events (SSE). You can send an AJAX request to
+	- AJAX with WebSockets: AJAX can be used to establish a WebSocket connection and receive real-time updates from a server. You can send an AJAX request to a server and establish a WebSocket
+	- AJAX with Web Workers: AJAX can be used to execute JavaScript code in a background thread using Web Workers. You can send an AJAX request to a server and execute the JavaScript code
+
+	DOM: Document Object Model (DOM) is a programming interface for HTML and XML documents. It provides a way to access and manipulate the structure, style, and content of a document. DOM nodes represent the
+	- DOM Tree: The DOM tree represents the structure and relationships of the document. Each node in the tree has a parent, child nodes, and attributes. DOM nodes can be accessed using JavaScript
+	- DOM Node: A DOM node represents a part of the document. DOM nodes can have child nodes, attributes, and properties. DOM nodes can be accessed using JavaScript and manipulated using DOM
+	- DOM Element: A DOM element represents a HTML element. DOM elements have properties and methods specific to HTML elements, such as attributes, child nodes, and event handlers. DOM elements can be
+	- DOM Document: A DOM document represents the entire HTML document. DOM documents have properties and methods specific to HTML documents, such as title, body, and head elements. DOM documents can be
+	- DOM Event: A DOM event represents an action that occurs in a web page or web application. DOM events can be triggered by user actions, browser events, or programmatic events. DOM
+	- DOM Attribute: A DOM attribute represents an attribute of a HTML element. DOM attributes have a name and a value. DOM attributes can be accessed using JavaScript and manipulated using DOM
+	- DOM Property: A DOM property represents a property of a HTML element or an object. DOM properties can be accessed using JavaScript and manipulated using DOM. DOM properties can be
+	- DOM Selection: A DOM selection represents a portion of the document, such as a selected text, an HTML element, or a range of text. DOM selections can be accessed using JavaScript and
+	- DOM Traversal: DOM traversal allows you to navigate through the DOM tree and access specific elements or perform operations on them. DOM traversal methods include childNodes, parentNode, firstChild,
+	- DOM Manipulation: DOM manipulation allows you to add, remove, or modify elements in the DOM tree. DOM manipulation methods include appendChild(), removeChild(), replaceChild(), and create
+	- DOM Events: DOM events are triggered when specific actions occur in a web page or web application. DOM events can be triggered by user actions, browser events, or programmatic events. DOM
+	- DOM Event Listener: A DOM event listener is a function that will be called when a specific event occurs on a specified element. DOM event listeners can be attached using JavaScript and
+	- DOM Event Object: A DOM event object represents an action that occurs in a web page or web application. DOM event objects have properties and methods specific to the event, such as type,
+	- DOM Event Target: A DOM event target represents the element that the event listener is attached to. When an event occurs, the event target is the element that received the event. DOM event
+	- DOM Event Types: There are various DOM event types available in JavaScript, such as click, mouseover, keydown, keyup, load, and more. Each event type has its
+	- DOM Event Bubbling: DOM event bubbling is a mechanism in which events propagate up the DOM tree from the target element to its parent elements. DOM event bubbling allows
+	- DOM Event Capturing: DOM event capturing is a mechanism in which events propagate down the DOM tree from the root element to the target element. DOM event capturing allows
+	- DOM Event Delegation: DOM event delegation is a technique where you attach a single event listener to a parent element, and then use event delegation to handle events for its child elements
+	- DOM Event Order: DOM event order is the order in which events are triggered and propagated. Events are triggered in the order they occur, and events are propagated in the order they
+	- DOM Caching: DOM caching is a technique used to store the result of expensive DOM operations to avoid recalculating them. DOM caching can improve performance by reducing the number of
+	- DOM Mutation Observer: A DOM mutation observer is a web API that allows you to observe changes to the DOM tree and react to them. DOM mutation observers can be used to detect when
+	- DOM Shadow DOM: DOM Shadow DOM is a feature in Web Components that allows you to create a shadow root for an element, allowing you to encapsulate the element's styling and content within
+	- DOM Custom Elements: DOM custom elements are custom elements that can be created using JavaScript. DOM custom elements can be used to create reusable, customizable elements in web applications. DOM custom
+documet.queryselector
+document.querySelectorAll
+document.getElementsById
+document.getElementsByclassnames
+documentgetElementsByTagName
+document.ElementsByName

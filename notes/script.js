@@ -50,5 +50,18 @@ do{
     k++;
 }while(k==10);
 
+//call back fuction
+function greet(name="uv"){
+    console.log("Hello",name);
+}
+function greetuser(callback){
+    console.log("hi uvaiz")
+    callback("uvaiz");
+    callback("aaa");
+}
+
+greetuser(greet);
+
+
 
 
