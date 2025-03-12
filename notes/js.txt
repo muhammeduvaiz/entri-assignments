@@ -161,3 +161,6 @@ document.getElementsById
 document.getElementsByclassnames
 documentgetElementsByTagName
 document.ElementsByName
+
+Event listeners
+bts.addEventListener("click", function(e) {	});

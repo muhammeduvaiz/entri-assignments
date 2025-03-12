@@ -44,3 +44,41 @@ function change(color){
     }
     console.log(elements[1].style.color);
 }
+function cars(){
+    let ca = document.getElementById("car").value;
+    document.getElementById("c").innerHTML = "You selected: " + ca;
+    alert("You selected: " + ca);
+}
+
+// event listener
+const btn2 = document.getElementById("btn2");
+btn2.addEventListener("click",function(){
+    alert("Button clicked");
+})
+
+btn2.addEventListener("mouseover",function(){
+    alert("Mouse over me");
+    
+})
+
+// Form Validation
+
+let form = document.getElementById("form");
+form.addEventListener("submit",function(event){
+    event.preventDefault();
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("pass").value;
+    if(username.trim().length>0 && password.trim().length>0){
+        alert("Form Submitted");
+        console.log("Form submitted");
+    } else{
+        alert("Please enter username and password");
+    }
+})
+
+//event listener
+const bt2 = document.getElementById("bt2");
+
+bt2.addEventListener("click",function(){
+    alert("Button clicked");
+})
