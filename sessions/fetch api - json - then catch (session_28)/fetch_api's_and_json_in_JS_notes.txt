@@ -1,0 +1,73 @@
+TOPIC: APIs - Fetch API, then, catch, JSON, and Objects
+
+1. What is an API?
+	- API (Application Programming Interface) allows communication between different software applications.
+	
+	Example: Fetching weather data from an online service.
+	
+2. Fetch API: ( we are using jsonplaceholder `https://jsonplaceholder.typicode.com/` for demo api calls)
+	- The Fetch API is used to make network requests (GET, POST, etc.).
+	- Methods are: 
+		- GET
+		- POST
+		- PUT
+		- PATCH
+		- DELETE
+		
+	Example1: Fetching Data (GET Request):
+		fetch("https://jsonplaceholder.typicode.com/posts/1")
+			.then(response => response.json())  // Convert response to JSON
+			.then(data => console.log(data))   // Handle the data
+			.catch(error => console.error("Error:", error));  // Handle errors
+	
+	- How it Works?
+		fetch(url): 							Sends a request to the URL.
+			.then(response => response.json()): Converts response to JSON.
+			.then(data => console.log(data)): 	Displays data in the console.
+			.catch(error): Catches errors 		(e.g., no internet).
+			
+3. Fetching Data with a POST Request:
+	- Used when sending data to a server.
+	
+	Example: Sending Data (POST Request):
+		fetch("https://jsonplaceholder.typicode.com/posts", {
+			method: "POST",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify({ title: "New Post", body: "This is a new post." })
+		}).then(response => response.json())
+			.then(data => console.log("Post Created:", data))
+			.catch(error => console.error("Error:", error));
+
+	- How it works:
+		method: "POST" → Specifies POST request.
+		headers → Tells server we’re sending JSON.
+		body → Sends data as a JSON string.
+
+4. Understanding JSON (JavaScript Object Notation):
+	- JSON is a text format used to store and transfer data.
+	
+	Example:
+		{
+			"name": "John",
+			"age": 30,
+			"skills": ["JavaScript", "React"]
+		}
+	
+	Example2: ( converting JSON to JavaScript Object ):
+		const jsonData = '{"name": "John", "age": 30}';
+		const obj = JSON.parse(jsonData);
+		console.log(obj.name); // Output: John
+	
+	Example3: ( Converting JavaScript Object to JSON ):
+		const person = { name: "John", age: 30 };
+		const jsonString = JSON.stringify(person);
+		console.log(jsonString); // Output: {"name":"John","age":30}
+		
+
+
+** SUMMARY **
+- Fetch API makes network requests.
+- .then() handles the response.
+- .catch() handles errors.
+- JSON is a format for sending data.
+- Objects store key-value pairs in JavaScript.

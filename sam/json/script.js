@@ -1,5 +1,5 @@
 function data(){
-    axios.get('https://jsonplaceholder.typicode.com/posts')
+    axios.get('https://jsonplaceholder.typicode.com/posts/100')
     .then(function(response){
         console.log(response.data);
     })
@@ -25,4 +25,34 @@ function adddata(){
     .catch(function (error) {
         console.log(error);
     });
+}
+
+function fetchdata(id){
+    axios.get(`https://jsonplaceholder.typicode.com/posts/${id}` )
+    .then(function(response){
+        console.log(response.data);
+    })
+    .catch((err) =>{
+        console.error(err);
+    })
+
+}
+
+function update(id){
+   const updateddata = {
+        
+        "title": "updated title",
+        "body": "repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque"
+      }
+      axios.put(`https://jsonplaceholder.typicode.com/posts/${id}`, updateddata, {
+        headers: {
+            'Content-Type': 'application/json'
+        }
+}) 
+.then(function(response){
+    console.log(response?.data);
+})
+.catch((err) =>{
+    console.error(err);
+})
 }

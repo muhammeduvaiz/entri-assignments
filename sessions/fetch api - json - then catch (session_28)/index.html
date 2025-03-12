@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Api's in Javascript</title>
+</head>
+
+<body>
+    <div style="margin: 20px">
+        <h2>Method Used: GET</h2>
+        <button style="padding: 5px" onclick="getDatas()">
+            Fetch All Datas
+        </button>
+    </div>
+    <div style="margin: 20px">
+        <h2>Method Used: GET (with query param)</h2>
+        <button style="padding: 5px" onclick="getDataById(3)">
+            Fetch specific Data with id
+        </button>
+    </div>
+    <div style="margin: 20px">
+        <h2>Method Used: POST</h2>
+        <button style="padding: 5px" onclick="addData()">
+            Send Data to server
+        </button>
+    </div>
+    <div style="margin: 20px">
+        <h2>Method Used: PUT</h2>
+        <button style="padding: 5px" onclick="updateData(3)">
+            update Data with specific id
+        </button>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
