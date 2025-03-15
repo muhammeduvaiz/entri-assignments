@@ -41,19 +41,19 @@ while(j<=10){
 }
 
 for (let j=0; j<=10;j++){
-    console.log("value of for j",j);
+    console.log(`value of for j ${j}`,j);
 }
 
 let k=0;
 do{
-    console.log("value of k",k);
+    console.log(`value of k${k}`,k);
     k++;
 }while(k==10);
 
 //call back fuction
 function greet(name="uv"){
     console.log("Hello",name);
-}
+} 
 function greetuser(callback){
     console.log("hi uvaiz")
     callback("uvaiz");
@@ -62,6 +62,64 @@ function greetuser(callback){
 
 greetuser(greet);
 
+// setTimeout
+setTimeout(()=>{
+    console.log("hello uvaiz");
+},2000);
 
+console.log("hello 1");
 
+//callbackHellExample
 
+function setTimeoutExample(){
+    setTimeout(()=>{
+        console.log("Step 1");
+            setTimeout(()=>{
+                console.log("Step 2");
+                setTimeout(()=>{
+                    console.log("Step 3");
+                },2000);
+            },2000);
+    },1000);
+
+}
+
+//promise
+function fetchdataa(){
+    return new Promise((resolve, reject) =>{
+        setTimeout(() => {
+            let success = true;
+            if(success){
+                resolve("success");
+            }else{
+                reject("failure");
+            }
+        }, 2000);
+    });
+}
+
+fetchdataa()
+.then((result) =>{
+    console.log(result);
+})
+.catch((error) =>{
+    console.error(error);
+});
+
+//async/await
+
+async function fetchdata(){
+    try{
+        console.log("fetching data");
+        let result = await new Promise((resolve) =>
+        setTimeout(() =>
+            resolve("success1")
+        ,2000)
+);
+        console.log(result);
+        console.log("did data receved");
+    }catch(error){
+        console.error(error);
+    }
+}
+fetchdata();

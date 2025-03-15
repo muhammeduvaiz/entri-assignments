@@ -56,3 +56,25 @@ function update(id){
     console.error(err);
 })
 }
+
+//promise
+function fetchdataa(){
+    return new Promise((resolve, reject) =>{
+        setTimeout(() => {
+            let success = true;
+            if(success){
+                resolve("success");
+            }else{
+                reject("failure");
+            }
+        }, 2000);
+    });
+}
+
+fetchdataa()
+.then((result) =>{
+    console.log(result);
+})
+.catch((error) =>{
+    console.error(error);
+});
