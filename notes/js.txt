@@ -164,3 +164,6 @@ document.ElementsByName
 
 Event listeners
 bts.addEventListener("click", function(e) {	});
+
+
+arrays
