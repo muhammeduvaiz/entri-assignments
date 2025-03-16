@@ -29,7 +29,25 @@ console.log(array);
 // splice() - removes elements from an array and, if necessary, inserts new elements in their place, returning the deleted elements.
 
 // Syntax: array.splice(start[, deleteCount[, item1[, item2[, ...]]]])
-const sli=array.splice(2,4);
+// const sli=array.splice(2,4);
 
-console.log(sli);
+// console.log(sli);
+// console.log(array);
+
+//splice() - removes elements from an array and, if necessary, inserts new elements in their place, returning the deleted elements.
+const splic=array.splice(2,4,'1','2','3');
+console.log(splic);
 console.log(array);
+
+
+console.log("join")
+// string method in array
+// join() - joins all elements of an array into a string
+
+const arrjoint = array.join('-');
+console.log(arrjoint);
+//split - joins all elements of an array into a string 
+
+console.log("split");
+const arrsplit = arrjoint.split('-');
+console.log(arrsplit);
