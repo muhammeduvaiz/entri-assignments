@@ -1,0 +1,21 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 500px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.invalid-feedback {
+    color: red;
+    font-size: 0.9em;
+}
+
+.valid-feedback {
+    color: green;
+    font-size: 0.9em;
+}
