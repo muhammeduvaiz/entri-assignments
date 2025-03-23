@@ -1,12 +1,15 @@
 import React from 'react'
 
-export const Button = () => {
+export const Button = (props) => {
   return (
     <div>
-        <button>Click Me</button>
+        <button
+        onClick={props.handleButtonClick}
+        >{props.label}</button>
     </div>
   )
 }
+
 
 export const Button2 = () => {
     return (
