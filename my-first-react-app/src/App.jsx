@@ -4,20 +4,30 @@ import Banner from './components/Banner';
 import About from './components/About';
 import { Button, Button2 } from './components/Button';
 import NotAuther from './components/NotAuther';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
+import Nav from './components/Nav';
 const App = () => {
 
-  const user = "uvaiz"
+  const user = "uvaiz";
 
+localStorage.setItem('user', JSON.stringify (user));
+ const userName= JSON.parse(localStorage.getItem('user'));
+
+
+ console.log(userName);
   function bbclick() {
     console.log('Button Clickedbb')
   }
+  
   return (
 
     <>
       {
-        user === "uvaiz" ? (
+        user == "uvaiz" ? (
 
           <>
+          <Nav />
             <div className="App" style={{
               backgroundColor: "lightblue",
               color: "darkblue",

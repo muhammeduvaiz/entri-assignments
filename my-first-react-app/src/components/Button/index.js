@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 export const Button = (props) => {
   return (
     <div>
@@ -14,11 +15,8 @@ export const Button = (props) => {
 export const Button2 = () => {
     return (
       <div >
-          <button style={{
-            color: 'green',
-            backgroundColor: 'lightblue',
-            border: '1px solid green',
-          }}>Click Me 2</button>
+          <button className='btn btn-primary'
+        >Click Me 2</button>
       </div>
     )
   }
