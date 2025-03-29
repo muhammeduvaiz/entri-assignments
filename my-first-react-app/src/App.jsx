@@ -11,15 +11,15 @@ const App = () => {
 
   const user = "uvaiz";
 
-localStorage.setItem('user', JSON.stringify (user));
- const userName= JSON.parse(localStorage.getItem('user'));
+  localStorage.setItem('user', JSON.stringify(user));
+  const userName = JSON.parse(localStorage.getItem('user'));
 
 
- console.log(userName);
+  console.log(userName);
   function bbclick() {
     console.log('Button Clickedbb')
   }
-  
+
   return (
 
     <>
@@ -27,7 +27,7 @@ localStorage.setItem('user', JSON.stringify (user));
         user == "uvaiz" ? (
 
           <>
-          <Nav />
+            <Nav />
             <div className="App" style={{
               backgroundColor: "lightblue",
               color: "darkblue",
