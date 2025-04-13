@@ -32,7 +32,7 @@ const Card = ({prodectName, price ,image}) => {
         overflow: 'hidden'
        }}>
         <img 
-          src={prodectImage} 
+          src={image} 
           className="card-img-top" 
           alt="Card image"
         />

@@ -1,9 +1,9 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.min.js';
+import 'bootstrap/dist/js/bootstrap.min';
 import Header from './components/Header';
 import Card from './components/Header/Card';
-import prodectImage from '../src/components/Header/image/image.jpg';
+import prodectImage from './components/Header/image/image.jpg';
 function App() {
   const prodects = [
     {
