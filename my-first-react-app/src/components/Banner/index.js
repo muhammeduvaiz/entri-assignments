@@ -1,7 +1,17 @@
-import React from 'react'
+import { useRef, useEffect } from 'react'
+
 import { Button } from '../Button'
 
 const Banner = () => {
+
+    useEffect(() => {
+        console.log('Banner Component Mounted');
+    }, []);
+    useEffect(() => {
+        return () => {
+            console.log('Banner Component Unmounted');
+        }
+    }, []);
     function bclick(){
         console.log('Button Clicked')
       

@@ -3,6 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import Header from './components/Header';
 import Card from './components/Card';
+import Form from './components/Form';
+import UseState from './components/UseState';
 function App() {
   const prodects = [
     
@@ -87,17 +89,24 @@ function App() {
       <div className="d-flex justify-content-center flex-wrap gap-3">
 
         {
-          prodects.map((prodect) => (
+          prodects.map((prodect,index) => (
 
             <Card
+            // key={index}
+              key={prodect.id}
               cat={prodect.category}
               prodectName={prodect.name}
               price={prodect.price}
               image={prodect.image}
             />
-          ))}
+          ))}   
 
       </div>
+      <div>
+        <Form />
+      </div>
+
+      <UseState/>
     </>
   );
 }

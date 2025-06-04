@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './App.css';
 import Banner from './components/Banner';
 import About from './components/About';
@@ -7,6 +7,7 @@ import NotAuther from './components/NotAuther';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import Nav from './components/Nav';
+import Axiosdata from './components/Axiosdata';
 const App = () => {
 
   const user = "uvaiz";
@@ -19,7 +20,12 @@ const App = () => {
   function bbclick() {
     console.log('Button Clickedbb')
   }
+const [showaxiosdata, setShowaxiosdata] = useState(false);
 
+  function handleAxiosData() {
+    setShowaxiosdata(!showaxiosdata);
+    console.log('Axios Data Button Clicked');
+  }
   return (
 
     <>
@@ -64,6 +70,13 @@ const App = () => {
             }}>
 
               <Button2 />
+            </div>
+            <Button label={"Show Axios Data"}
+              handleButtonClick={handleAxiosData} />
+            <div>
+              {
+                showaxiosdata && <Axiosdata />
+                }
             </div>
           </>
         ) : (
