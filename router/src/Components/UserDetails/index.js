@@ -5,7 +5,7 @@ import { useLoaderData } from 'react-router-dom';
 export async function userLoader({params}){
     console.log(params);
     try{
-const res=await axios.get(`https://jsonplaceholder.typicode.com/users/${params.userId}`);
+const res=await axios.get(`https://jsonplaceholder.typicode.com/users-/${params.userId}`);
     console.log(res);
     return res.data;
     }
