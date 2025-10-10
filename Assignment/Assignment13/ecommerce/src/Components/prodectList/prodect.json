@@ -1,0 +1,64 @@
+{
+    "prodects": [
+        {
+            "id": 1,
+            "name": "Laptop",
+            "ProdectImage": "https://i.imgur.com/Ft2Z3SE.jpeg",
+            "price": 50000,
+            "Description": "Laptop is a device that is used to store and process data."
+        },
+        
+        {
+            "id": 2,
+            "name": "Smartphone",
+            "ProdectImage":"https://i.imgur.com/G8CwOvL.jpeg",
+            "price": 20000,
+            "Description": "Smartphone is a device that is used to store and process data."
+        },
+        
+        {
+            "id": 3,
+            "name": "Tablet",
+            "price": 30000,
+            "ProdectImage":"https://i.imgur.com/LYRcGNL.png",
+            "Description": "Tablet is a device that is used to store and process data."
+        },
+        {
+            "id": 4,
+            "name": "Smart watch",
+            "price": 4000,
+            "ProdectImage": "https://i.imgur.com/ye6uOlJ.jpeg",
+            "Description": "Smartwatch is a device that is used to store and process data."
+        },
+        
+        {
+            "id": 5,
+            "name": "Smart TV",
+            "price": 50000,
+            "ProdectImage": "https://i.imgur.com/KXbBCPz.jpeg",
+            "Description": "Smart TV is a device that is used to store and process data."
+        },
+        
+        {
+            "id": 6,
+            "name": "Smart Home",
+            "price": 60000,
+            "ProdectImage": "https://i.imgur.com/p09fLRG.jpeg",
+            "Description": "Smart Home is a device that is used to store and process data."
+        },
+        {
+            "id": 7,
+            "name": "Shoes",
+            "price": 70000,
+            "ProdectImage": "https://i.imgur.com/7CPercO.jpeg",
+            "Description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        },
+        {
+            "id": 8,
+            "name": "Monitor",
+            "price": 8000,
+            "ProdectImage": "https://i.imgur.com/TPLUjnX.jpeg",
+            "Description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        }
+    ]
+}
