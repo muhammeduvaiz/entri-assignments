@@ -204,6 +204,69 @@
     navigate(`/user/${userid}`)
   }  // it will navigate to the page
 
+***Redux***  // redux means setting veriable globaly 
+  import {configureStore} from "@reduxjs/toolkit";
+  const reduxStore = configureStore({
+    reducer : {
+      counter: counterReducer  // every reducer need to be added
+    }
+  });
+
+  export default reduxStore;
+
+  Reducer***
+
+  import {createSlice} from "@reduxjs/toolkit";
+  const counterSlice = createSlice({
+    name:"Counter",
+    initialState:{value:0,
+    showDecrement: false},
+    reducers:{            // methods should be written here
+        increament: (state, action)=>{
+          state.value += action.payload;
+          if(state.value ===0){
+            state.showDecrement=false;
+          }else{
+            state.showDecrement=true;
+          }
+        },
+        decrement:(state, action)=>{
+          state.value -= action.payload;
+          if(state.value ===0){
+            state.showDecrement=false;
+          }
+        }
+    }
+  })
+
+  export const {
+    increament,
+    decrement
+  } = counterSlice.actions;
+  export default counterSlice.reducer;
+
+  // in main index.js the APP need to wrapped in Provide
+  root.render(
+    <Provider store={reduxStore}>
+    <App/>
+    </provider>
+  )
+
+  **useSelector and useDispatch
+  import {increament, decrement} from "../../counterSlice";
+  import {useSelector, useDispatch} from "react-redux";
+  const Counter =()=> {
+    const count = useSelector((state) => {  // useSelector is used for getting the value
+      console.log ("state", state.counter.value);
+      return state.counter.value;
+    });
+  }
+  const showDecrement= useSelector((state) => state.counter.showDecrement);  //it will return to the show decrement
+  
+  const dispatch = useDispatch();   // useDispatch is used to set the value. only with useDispatch we can change the values
+  const handleClick = (value)=>{
+    dispatch(increament(value));  // the value will  be updated
+  }
 
 ******** EXTRA ***********
   const [showAboutComponents,setShowAboutComponents]= useState(false)       // it refers to that if showAboutComponents is there the AboutComponents will appear
@@ -228,8 +291,8 @@
   export const About1
 
 ***Conditional Rendering***
+  <>
 
-<>
       {
         user == "uvaiz" ? (
 
@@ -283,5 +346,17 @@
         ) : (
 
           <NotAuther username={user} />)
+      }
+
+***ternaory operator***
+  {
+    showDecrement ? (
+      <button>decrement</button>
+    ) : (
+      <button 
+      style{{disabled={true}}}>decrement</button>
+    )
+  }
+
 
 
