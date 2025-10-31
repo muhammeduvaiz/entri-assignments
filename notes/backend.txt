@@ -92,3 +92,436 @@ REPL is an interactive shell thats lets you run javascript commands in the termi
         })
             }
     }
+
+
+**MongoDB**
+
+    prodect.push   // it is used to push the prodect eg: to array, database
+    FindIndex  // it will  find the index
+    0.0.0.0/0  // give this ip adress
+
+    const mongoose = require('mongoose');
+    require('dotenv').config();
+    const mongouri =  process.env.MONGO_URI ; // Default to local MongoDB if not set
+    // Connect to MongoDB using Mongoose
+    mongoose.connect('mongodb url from atlas or local host',{
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+    })
+    .then(() => {
+        console.log("Test Database connected successfully");
+    }).catch((error) => {
+        console.error("Database connection failed:", error);
+    });
+
+** Schema**
+    const mongoose = require('mongoose');
+
+    const prodectSchema = new mongoose.Schema({
+        category:{
+            type: String,
+            unique:true
+        },
+        name:{
+            type: String,
+            required: true
+        },
+        price:{
+            type: Number,
+            required: true
+        },
+        size:{
+            type: String,
+            enum:['s','m','l'],
+            required: true
+        },
+        isActive:{
+            type: Boolean,
+            default: true
+        },
+        isDeletet: {
+            type: Boolean,
+            default: false
+        },{
+            timestamps: true
+        }
+    });
+
+    const prodectModel = mongoose.model('prodect',prodectSchema);
+    module.exports = prodectModel;
+
+**Controller** 
+module.exports = {
+        addProdect:(req, res) => {
+            const {name,size,price} = req.body;
+
+            if(name && price && size ){
+                const newProdect = new prodectModel({
+                    name,
+                    price,
+                    size
+                });
+                newProdect.save()
+                .then{}
+                .catch{}
+            } else {
+
+            }
+        }
+ getProdect:async (req, res) =>{
+            try{
+                const prodect = await ProdectModel.find({isDeletet:false});  // find is used to find the prodect
+
+                return res.status(200).json(){
+                    success: true,
+                    message: "prodect fetched",
+                    count: prodect.length,
+                    data: prodect
+                }
+            }
+            catch{
+
+            }
+        }
+    }
+
+updateProduct: (req, res) => {
+        try {
+            const { productId, updatedData } = req.body;
+
+            if (productId) {
+                ProductModel.updateOne(
+                    { _id: productId },
+                    updatedData
+                    // {
+                    // name: name,
+                    // size: updatedData?.size
+                    // }
+                ).then((response) => {
+                    // console.log("response: ", response);
+
+                    return res.status(200).json({
+                        success: true,
+                        statusCode: 200,
+                        message: "Product updated successfully"
+                    });
+                })
+                    .catch((err) => {
+                        console.log("err: ", err);
+                        return res.status(200).json({
+                            success: false,
+                            statusCode: 400,
+                            message: "Product updating failed",
+                            error: err
+                        });
+                    })
+
+            } else {
+                return res.status(200).json({
+                    success: false,
+                    statusCode: 400,
+                    message: "Missing required fields"
+                });
+            }
+
+        } catch (err) {
+            return res.status(500).json({
+                success: false,
+                statusCode: 500,
+                message: "Internal Server Error"
+            })
+        }
+     }
+
+// soft_delete method
+    deleteProduct: (req, res) => {
+        try {
+            const { productId } = req.query;
+
+            if (productId) {
+                ProductModel.updateOne(
+                    { _id: productId },
+                    {
+                        $set: {
+                            isDeleted: true
+                        }
+                    }
+                ).then((response) => {
+                    if (response?.modifiedCount != 0) {
+                        return res.status(200).json({
+                            success: true,
+                            statusCode: 200,
+                            message: "Product deleted successfully"
+                        });
+                    } else {
+                        return res.status(200).json({
+                            success: false,
+                            statusCode: 400,
+                            message: "Product deleting failed",
+                            error: err
+                        });
+                    }
+                }).catch(err => {
+                    console.log("err: ", err);
+                    return res.status(200).json({
+                        success: false,
+                        statusCode: 400,
+                        message: "Product deleting failed",
+                        error: err
+                    });
+                })
+
+            } else {
+                return res.status(200).json({
+                    success: false,
+                    statusCode: 400,
+                    message: "Missing required fields"
+                });
+            }
+
+        } catch (err) {
+            return res.status(500).json({
+                success: false,
+                statusCode: 500,
+                message: "Internal Server Error"
+            })
+        }
+    },
+// hard_delete method
+    deleteProductFromDatabase: async (req, res) => {
+        try {
+            const { productId } = req.query;
+
+            if (productId) {
+                const response = await ProductModel.deleteOne({ _id: productId });
+                if (response.deletedCount != 0) {
+                    return res.status(200).json({
+                        success: true,
+                        statusCode: 200,
+                        message: "Product deleted successfully"
+                    })
+                } else {
+                    return res.status(200).json({
+                        success: false,
+                        statusCode: 400,
+                        message: "Product deleting failed"
+                    });
+                }
+            } else {
+                return res.status(200).json({
+                    success: false,
+                    statusCode: 400,
+                    message: "Missing required fields"
+                });
+            }
+
+        } catch (err) {
+            return res.status(500).json({
+                success: false,
+                statusCode: 500,
+                message: "Internal Server Error"
+            })
+        }
+    }
+**EXTRA** 
+    **aggregation**
+
+        => Find
+        =>.lean()   //it is used for convert mongoose object to javascript object
+        =>updateOne // to update one components
+        =>updateMany // to update more than one componenets
+        =>deleteOne // to delete the data
+        =>$set  // is used to set a value
+        =>$match  // filter documents based on conditions
+        =>$group  // groups documents and applies aggregation funtions
+        =>$sort  // sorts documents
+        =>$project  // Reshapes documents by including/excluding fields
+        =>$lookup  // Joins another collection (like SQL JOIN)
+        =>$unwind // Deconstructs an array field into multiple documents
+        =>$limit  // Limits the number of results
+        =>$skip  //  Skips a specified number of documents
+
+        const UserModel = require("../models/UserModel");
+
+module.exports = {
+    addUser: (req, res) => {
+        try {
+            const { name, username, email, age, gender } = req.body;
+
+            if (name && username && email && age) {
+                const newUser = new UserModel({
+                    name,
+                    username,
+                    email,
+                    age,
+                    gender
+                });
+                newUser.save()
+                    .then((response) => {
+                        console.log("response: ", response);
+
+                        return res.status(201).json({
+                            success: true,
+                            statusCode: 201,
+                            message: "User added successfully",
+                        });
+                    })
+                    .catch((error) => {
+                        console.log("error: ", error);
+
+                        if (error?.code === 11000) {
+                            return res.status(200).json({
+                                success: false,
+                                statusCode: 400,
+                                message: "User with same name already exists!"
+                            });
+                        } else {
+                            return res.status(200).json({
+                                success: false,
+                                statusCode: 400,
+                                message: "User adding failed"
+                            });
+                        }
+                    })
+            } else {
+                return res.status(200).json({
+                    success: false,
+                    statusCode: 400,
+                    message: "Missing required fields"
+                });
+            }
+
+        } catch (err) {
+            res.status(500).json({
+                success: false,
+                statusCode: 500,
+                message: "Internal Server Error"
+            });
+        }
+    },
+    getUsers: async (req, res) => {
+        try {
+            // conditions:
+            // fetch users 18+ age
+            // sort by gender field
+
+            /* aggregation method */
+            // const users = await UserModel.aggregate([
+            //     {
+            //         '$match': {
+            //             'isDeleted': false
+                            age : {$gte: 18}
+            //         }
+            //     }, {
+            //         '$lookup': {
+            //             'from': 'products',
+            //             'localField': 'cart.productId',
+            //             'foreignField': '_id',
+            //             'as': 'products'
+            //         }
+            //     }, {
+            //         '$sort': {
+            //             'gender': 1
+            //         }
+            //     },
+            //      {
+            //   $limit:2
+            // }
+            // ]);
+
+            /* using find method */
+            const users = await UserModel
+                .find({ isDeleted: false })
+                .populate('cart.productId')
+                .lean();
+
+            res.status(200).json({
+                success: true,
+                statusCode: 200,
+                message: "Users fetched successfully",
+                count: users.length,
+                data: users,
+            });
+
+        } catch (err) {
+            console.log("error: ", err);
+            res.status(500).json({
+                success: false,
+                statusCode: 500,
+                message: "Internal Server Error"
+            });
+        }
+    },
+    addProductToUserCart: (req, res) => {
+        try {
+            const { userId, product } = req.body;
+            const { productId, quantity } = product;
+
+            if (userId && productId && quantity) {
+
+                UserModel.updateOne(
+                    { _id: userId },
+                    {
+                        $push: {
+                            cart: product
+                        }
+                    }
+                ).then((response) => {
+                    if (response?.modifiedCount !== 0) {
+                        res.status(200).json({
+                            success: true,
+                            statusCode: 200,
+                            message: "Product added to cart successfully"
+                        })
+                    } else {
+                        res.status(200).json({
+                            success: false,
+                            statusCode: 400,
+                            message: "Product adding to cart failed"
+                        })
+                    }
+                })
+            } else {
+                return res.status(200).json({
+                    success: false,
+                    statusCode: 400,
+                    message: "Missing required fields"
+                });
+            }
+
+        } catch (err) {
+            console.log("error: ", err);
+            res.status(500).json({
+                success: false,
+                statusCode: 500,
+                message: "Internal Server Error"
+            });
+        }
+    }
+}
+
+Duplication key error
+     if (error?.code === 11000) {
+                            return res.status(200).json({
+                                success: false,
+                                statusCode: 400,
+                                message: "Product with same category already exists!"
+                            });}
+Invalid ID Format (CastError)
+    if (error?.code === CastError) {
+                            return res.status(400).json({
+                                success: false,
+                                statusCode: 400,
+                                message: "Invalid ID Format"
+                            });}
+Validation Errors  Schema issue such as string and number
+    if (error?.code === ValidationError) {
+                            return res.status(400).json({
+                                success: false,
+                                statusCode: 400,
+                                message: "Validation error Occured"
+                            });}
+
+Index 
+    Manually adding index
+     userSchema.index({ age : 1 });
