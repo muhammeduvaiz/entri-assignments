@@ -7,7 +7,6 @@ const mongoose =    require('mongoose');
         })
         .catch((error)=>{
             console.error('MongoDB connection error:', error);
-            process.exit(1);
         })
 
 
