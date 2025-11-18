@@ -525,3 +525,15 @@ Validation Errors  Schema issue such as string and number
 Index 
     Manually adding index
      userSchema.index({ age : 1 });
+
+    Automatically adding index
+     userSchema.index
+
+ state_id:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'State',
+        required:true
+ }
+
+populate
+
