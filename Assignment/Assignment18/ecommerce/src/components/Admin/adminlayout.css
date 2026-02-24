@@ -1,0 +1,13 @@
+.admin-container {
+    
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    font-family: 'Lato', sans-serif;
+    color: #2c3e50;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */
+}
+
+.admin-content {
+    padding: 30px;
+    /* Top padding to account for absolute/fixed navbar */
+}
